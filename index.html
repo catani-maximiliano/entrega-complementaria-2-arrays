@@ -11,6 +11,30 @@
 </head>
 
 <body>
+    <div class="m-5">
+        <h1 class="text-center m-4">Platos del restaurante</h1>
+        <h5 class="m-4  text-decoration-underline"> A continuacion se encontrara 5 botones, cada uno con una funcion diferente;</h5>
+        <ul>
+            <li>
+                <p>el boton de INGRESAR es para cargar los platos al array mediante diferentes prompt</p>
+            </li>
+            <li>
+                <p>el boton de MOSTRAR mostrara los platos que se cargaron previamente en el orden en que se cargaron
+                </p>
+            </li>
+            <li>
+                <p>el boton de ORDENAR POR PRECIO , hara eso, ordenar los platos por orden del precio creciente</p>
+            </li>
+            <li>
+                <p>el boton de ORDENAR POR PRODUCTO, ordenara por el nombre de los platos de la A ala Z</p>
+            </li>
+            <li>
+                <p>el boton de LIMPIAR TABLA, borrara lo que aparece en la tabla dejandola sin datos, pero sin borrar
+                    los arrays de cada tabla generada</p>
+            </li>
+        </ul>
+    </div>
+    
     <div class="m-3 d-flex flex-row justify-content-around">
         <button id="ingresar" class="btn btn-secondary btn-lg">Ingresar Plato</button>
         <button id="mostrar" class="btn btn-secondary btn-lg">Mostrar los Platos</button>
@@ -18,8 +42,6 @@
         <button id="ordenarProducto" class="btn btn-secondary btn-lg">Ordenar por Producto</button>
         <button id="resetear" class="btn btn-secondary btn-lg">Limpiar Tabla</button>
     </div>
-
-
     <table id="tabla" class="w-75 m-5 table table-bordered table-striped table-dark">
         <tr>
             <th>Plato</th>

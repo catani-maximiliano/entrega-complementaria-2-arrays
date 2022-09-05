@@ -8,13 +8,15 @@ const resetear = document.querySelector("#resetear");
 let nuevoPlato = [];
 
 const elemento = document.querySelector("#tabla");
+let listaPlatos = document.getElementById("tabla");
+
+let tablaContent = ``;
 let tablaContentPrecio= ``;
 let tablaContentProducto= ``;
-let ordenadosPrecio=[];
 
-let listaPlatos = document.getElementById("tabla");
-let tablaContent = ``;
+let ordenadosPrecio=[];
 let ordenadosProducto=[];
+
 
 class comidas {
   constructor(nombre, ingredientes, lugar, precio) {
@@ -77,11 +79,9 @@ function ordenPrecio() {
   reset();
 
   ordenadosPrecio= nuevoPlato.map(elemento =>elemento);
-
   ordenadosPrecio.sort(function(a,b){
     return a.precio-b.precio;
   })
-
 
   for (let item1 of ordenadosPrecio ) {
     tablaContentPrecio += `
@@ -96,17 +96,10 @@ function ordenPrecio() {
   listaPlatos.innerHTML += tablaContentPrecio;
 }
 
-
-
-
-
-
-
 function ordenProducto() {
   reset();
   ordenadosProducto= nuevoPlato.map(elemento =>elemento);
- 
-  ordenadosProducto.sort(function(a,b){
+ ordenadosProducto.sort(function(a,b){
     if (a.nombre > b.nombre) {
       return 1;
       }
@@ -115,7 +108,6 @@ function ordenProducto() {
       }
       return 0;
   })
-
 
   for (let item1 of ordenadosProducto ) {
     tablaContentProducto += `
